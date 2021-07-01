@@ -1,0 +1,27 @@
+<head>
+    <title>User Data Input</title>
+</head>
+
+<body>
+    <center>
+        <h1>User Data Input</h1>
+    </center>
+    <form>
+        <label for="fname" >First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="birthday">Date of Birth:</label><br>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        <button onclick="storeDataInLocalStorage()">Submit</button>
+    </form>
+<script>
+    function storeDataInLocalStorage(){
+        localStorage.setItem("firstname", document.getElementById("fname"));
+        localStorage.setItem("lname", document.getElementById("lname"));
+        localStorage.setItem("birthday", document.getElementById("birthday"));
+        location.href="second.html";
+    }
+</script>
+    
+</body>
